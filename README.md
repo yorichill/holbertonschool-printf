@@ -104,7 +104,7 @@ Check for memory leaks using Valgrind:
 Flowchart
 The following diagram illustrates the logic of the _printf function:
 
-![Flowchart description](Flowchart.png)
+![Flowchart description]()
 
 ----------------------------------------------------------------
 
