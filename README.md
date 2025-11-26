@@ -23,9 +23,9 @@ Supported conversion specifiers:
 ## Compilation
 Compile all source files using the following command:
 
-```bash
+```
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o printf
-
+```
 The function prototype is:
 int _printf(const char *format, ...);
 
