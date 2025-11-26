@@ -2,29 +2,31 @@
 #define MAIN_H
 
 #include <stdarg.h>
-#include <stddef.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <limits.h>
 
 /**
- * Prototype principal de _printf
+ * struct specifier - Structure pour mapper un symbole à une fonction
+ * @type: Le caractère (ex: 'c', 's', 'd')
+ * @func: Le pointeur vers la fonction handler
  */
-int _printf(const char *format, ...);
-
-/**
- * Type pour associer un caractère de spécificateur à une fonction handler.
- * - type : caractère du format (ex: 'c', 's', '%')
- * - func : pointeur vers la fonction qui traitera ce type (va_list -> int)
- */
-typedef struct specifier_s
+typedef struct specifier
 {
-    char type;
-    int (*func)(va_list);
+	char type;
+	int (*func)(va_list);
 } specifier_t;
 
-/* Prototypes des handlers définis dans _printf.c (déclarés ici pour éviter
- * implicit declaration errors lors de la compilation). */
+/* Fonction principale */
+int _printf(const char *format, ...);
+
+/* Fonction de base */
+int _putchar(char c);
+
+/* Fonctions "ouvriers" (Handlers) */
 int print_char(va_list args);
 int print_string(va_list args);
 int print_percent(va_list args);
-int (*get_specifier_func(char c))(va_list);
+int print_int(va_list args);
 
-#endif /* MAIN_H */
+#endif
