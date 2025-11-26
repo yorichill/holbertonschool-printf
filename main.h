@@ -1,10 +1,16 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <limits.h>
 #include <stdio.h>
 #include <stdarg.h>
 #include <unistd.h>
+
+typedef struct specifier
+{
+    char type;
+    int (*func)(va_list);
+} specifier_t;
 
 int _printf(const char *format, ...);
 int _putchar(char c);
