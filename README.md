@@ -26,32 +26,53 @@ Compile all source files using the following command:
 ```
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o printf
 ```
+
+----------------------------------------------------------------
+
 The function prototype is:
+```
 int _printf(const char *format, ...);
+```
 
 ----------------------------------------------------------------
 
 1. Printing a character Input:
+```
 _printf("Character: %c\n", 'A');
+```
 Output:
+```
 Character: A
+```
 
 2. Printing a string Input:
+```
 _printf("String: %s\n", "Holberton");
+```
 Output:
+```
 String: Holberton
+```
 
 3. Printing integers Input:
+```
 _printf("Integer: %d\n", 1024);
 _printf("Negative: %i\n", -42);
+```
 Output:
+```
 Integer: 1024
 Negative: -42
+```
 
 4. Printing a percent sign Input:
+```
 _printf("Percent: %%\n");
+```
 Output:
+```
 Percent: %
+```
 
 ----------------------------------------------------------------
 
