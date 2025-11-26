@@ -11,19 +11,15 @@
  * @type: Le caractère (ex: 'c', 's', 'd')
  * @func: Le pointeur vers la fonction handler
  */
+
 typedef struct specifier
 {
 	char type;
 	int (*func)(va_list);
 } specifier_t;
 
-/* Fonction principale */
-int _printf(const char *format, ...);
-
-/* Fonction de base */
 int _putchar(char c);
-
-/* Fonctions "ouvriers" (Handlers) */
+int _printf(const char *format, ...);
 int print_char(va_list args);
 int print_string(va_list args);
 int print_percent(va_list args);
