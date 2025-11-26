@@ -80,6 +80,7 @@ Testing
 Functional Tests
 Create a main.c file. Call _printf with various format specifiers and edge cases. Compare the return value and output with the standard printf function. Example main.c:
 
+```
 #include <limits.h>
 #include <stdio.h>
 #include "main.h"
@@ -91,11 +92,12 @@ int main(void)
     printf("Length: %d\n", len);
     return (0);
 }
+```
 
 Memory Check
 Check for memory leaks using Valgrind:
 
-valgrind ./printf
+`valgrind ./printf`
 
 ----------------------------------------------------------------
 
