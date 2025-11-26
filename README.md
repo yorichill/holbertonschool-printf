@@ -41,18 +41,14 @@ int _printf(const char *format, ...);
 _printf("Character: %c\n", 'A');
 ```
 Output:
-```
 Character: A
-```
 
 2. Printing a string Input:
 ```
 _printf("String: %s\n", "Holberton");
 ```
 Output:
-```
 String: Holberton
-```
 
 3. Printing integers Input:
 ```
@@ -60,26 +56,23 @@ _printf("Integer: %d\n", 1024);
 _printf("Negative: %i\n", -42);
 ```
 Output:
-```
 Integer: 1024
 Negative: -42
-```
 
 4. Printing a percent sign Input:
 ```
 _printf("Percent: %%\n");
 ```
 Output:
-```
 Percent: %
-```
 
 ----------------------------------------------------------------
 
 Manual Page
 A custom man page is included with the project. To view it, run the following command:
 
-man ./man_3_printf
+`man ./man_3_printf`
+
 
 ----------------------------------------------------------------
 
@@ -109,7 +102,7 @@ valgrind ./printf
 Flowchart
 The following diagram illustrates the logic of the _printf function:
 
-![Flowchart description](flowchart.png)
+![Flowchart description](Flowchart.png)
 
 ----------------------------------------------------------------
 
